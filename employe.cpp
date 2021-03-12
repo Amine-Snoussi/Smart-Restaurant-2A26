@@ -14,8 +14,8 @@ bool EMPLOYE::ajouter()
  {
  QSqlQuery query;
      //QString id= QString::number(ID);
-     query.prepare("INSERT INTO EMP (id,pren,nom,num,datee,salaire) "
-                         "VALUES (:id, :pren, :nom,:tel ,:datee,:salaire)");
+ query.prepare("INSERT INTO EMP (id,pren,nom,num,datee,salaire) "
+                     "VALUES (:id, :pren, :nom,:tel ,:datee,:salaire)");
      query.bindValue(":id",id);
      query.bindValue(":pren",nom);
      query.bindValue(":nom",pren);
