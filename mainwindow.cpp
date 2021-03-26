@@ -5,7 +5,10 @@
 #include<QPainter>
 #include<QPdfWriter>
 #include<QSystemTrayIcon>
-
+#include<QPdfWriter>
+#include <QFileDialog>
+#include <QFile>
+#include <QtDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -13,8 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     ui->tableView->setModel(emp.afficher());
+    ui->tableView_2->setModel(co.afficherc());
+
     ui->comboBox->setModel(emp.afficheroncombo());
     ui->comboBox_2->setModel(emp.afficheroncombo());
+    ui->comboBox_emplo->setModel(emp.afficheroncombo());
+
+    ui->comboBox_3->setModel(co.afficheroncomboc());
+    ui->comboBox_4->setModel(co.afficheroncomboc());
 }
 
 MainWindow::~MainWindow()
@@ -47,7 +56,10 @@ void MainWindow::on_Ajouter_clicked()
 
 
 
-         ui->tableView->setModel(emp.afficher());
+         ui->tableView->setModel(emp.afficher());//actualisation tab afficher emp
+          ui->comboBox->setModel(emp.afficheroncombo());//actualisation combo supprimer
+           ui->comboBox_2->setModel(emp.afficheroncombo());//actualisation combo afficher
+
 
 
 }
@@ -99,3 +111,137 @@ void MainWindow::on_Modifier_clicked()
 }
 
 
+
+void MainWindow::on_le_rech_textChanged(const QString &arg1)
+{
+    QSqlQueryModel *model= new QSqlQueryModel();
+                QSqlQuery   *query= new QSqlQuery();
+        if(ui->comboBox_recherche->currentText()=="Nom"
+                ){
+            query->prepare("SELECT * FROM EMP WHERE NOM LIKE'"+arg1+"%'");//
+    query->exec();
+        model->setQuery(*query);
+    ui->tableView->setModel(model);
+
+
+        }
+        else {
+            if(ui->comboBox_recherche->currentText()=="Prenom"){
+                query->prepare("SELECT * FROM EMP WHERE PREN LIKE'"+arg1+"%'");//+tri
+        query->exec();
+            model->setQuery(*query);
+        ui->tableView->setModel(model);
+            }
+            else{
+                if(ui->comboBox_recherche->currentText()=="Id"){
+                    query->prepare("SELECT * FROM EMP WHERE id LIKE'"+arg1+"%'");//+tri
+            query->exec();
+                model->setQuery(*query);
+            ui->tableView->setModel(model);
+                }
+            }
+
+            }
+}
+
+void MainWindow::on_comboBox_emplo_currentIndexChanged(int index)
+{
+    int a;
+        a=index;
+    ui->comboBox_emplo->currentText();
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+void MainWindow::on_Ajouter_conge_clicked()
+{
+    cong c(ui->lineEdit_id_conge->text().toInt(),ui->comboBox_emplo->currentText().toInt(),ui->lineEdit_datedebut->text(),ui->lineEdit_datefin->text());
+   bool test= c.ajouterc();
+    ui->tableView_2->setModel(co.afficherc());
+    ui->comboBox_3->setModel(co.afficheroncomboc());
+     ui->comboBox_4->setModel(co.afficheroncomboc());
+
+}
+
+void MainWindow::on_comboBox_3_currentIndexChanged(int index)
+{
+    int a;
+        a=index;
+    ui->comboBox_3->currentText();
+}
+
+void MainWindow::on_Supprimer_conge_clicked()
+{
+
+    bool test=co.supprimerc(ui->comboBox_3->currentText().toInt());
+    if(test)
+    {ui->tableView_2->setModel(co.afficherc());//actualisation taa afficher
+            QMessageBox::information(nullptr,QObject::tr("ok"),
+                                     QObject::tr("suppression succful .\n"),
+                    QMessageBox::Cancel);
+             ui->comboBox_3->setModel(co.afficheroncomboc());
+        }
+
+        else
+            QMessageBox::critical(nullptr,QObject::tr("supprimer not open"),
+                                    QObject::tr("click cancel to exist"),
+                                    QMessageBox::Cancel);
+}
+
+void MainWindow::on_Modifier_conge_clicked()
+{
+    bool    test=co.modifierc(ui->comboBox_4->currentText().toInt(),ui->lineEdit_datedebut_2->text(),ui->lineEdit_datefin_2->text()) ;
+          if (test)
+          {
+                ui->tableView_2->setModel(co.afficherc());
+
+              QMessageBox::information(nullptr,QObject::tr("OK"),
+                                   QObject::tr("modification établie"),
+                                   QMessageBox::Ok);
+          }
+          else{
+          QMessageBox::critical(nullptr,QObject::tr("ERROR404"),
+                                  QObject::tr("modification non établie"),
+                                  QMessageBox::Cancel);}
+}
+
+void MainWindow::on_Imprimer_clicked()//excel
+{ QTableView *table;
+    table = ui->tableView;
+
+    QString filters("CSV files (.csv);;All files (.*)");
+    QString defaultFilter("CSV files (*.csv)");
+    QString fileName = QFileDialog::getSaveFileName(0, "Save file", QCoreApplication::applicationDirPath(),
+                       filters, &defaultFilter);
+    QFile file(fileName);
+
+    QAbstractItemModel *model =  table->model();
+    if (file.open(QFile::WriteOnly | QFile::Truncate)) {
+        QTextStream data(&file);
+        QStringList strList;
+        for (int i = 0; i < model->columnCount(); i++) {
+            if (model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString().length() > 0)
+                strList.append("\"" + model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString() + "\"");
+            else
+                strList.append("");
+        }
+        data << strList.join(";") << "\n";
+        for (int i = 0; i < model->rowCount(); i++) {
+            strList.clear();
+            for (int j = 0; j < model->columnCount(); j++) {
+
+                if (model->data(model->index(i, j)).toString().length() > 0)
+                    strList.append("\"" + model->data(model->index(i, j)).toString() + "\"");
+                else
+                    strList.append("");
+            }
+            data << strList.join(";") + "\n";
+        }
+        file.close();
+        QMessageBox::information(this,"Exporter To Excel","Exporter En Excel Avec Succées ");
+    }
+
+}
+
+void MainWindow::on_Pdf_conge_clicked()
+{
+ co.genererPDF();
+}

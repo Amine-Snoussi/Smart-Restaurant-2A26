@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "employe.h"
+#include "cong.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -28,8 +29,27 @@ private slots:
 
     void on_Quitter_clicked();
 
+    void on_le_rech_textChanged(const QString &arg1);
+
+    void on_comboBox_emplo_currentIndexChanged(int index);
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_Ajouter_conge_clicked();
+
+    void on_comboBox_3_currentIndexChanged(int index);
+
+    void on_Supprimer_conge_clicked();
+
+    void on_Modifier_conge_clicked();
+
+    void on_Imprimer_clicked();
+
+    void on_Pdf_conge_clicked();
+
 private:
     Ui::MainWindow *ui;
      EMPLOYE emp;
+     cong co;
 };
 #endif // MAINWINDOW_H

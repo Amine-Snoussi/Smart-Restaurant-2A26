@@ -1,5 +1,9 @@
 #include "employe.h"
-
+#include<QTableView>
+#include<QPainter>
+#include<QPdfWriter>
+#include <QFileDialog>
+#include <QFile>
 EMPLOYE::  EMPLOYE(int id,QString nom,QString pren,int tel,QString datee,int salaire)
 {
 this->id=id;
