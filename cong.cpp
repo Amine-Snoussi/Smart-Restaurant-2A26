@@ -1,4 +1,4 @@
-#include "cong.h"
+    #include "cong.h"
 
 
 cong::cong(int idco,int idem,QString datedeb ,QString datefin)
