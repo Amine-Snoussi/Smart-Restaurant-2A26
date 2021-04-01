@@ -1,6 +1,6 @@
 #include "gestioningredient.h"
 
-menu::menu()
+gestioningredient::gestioningredient()
 {
 
 }
