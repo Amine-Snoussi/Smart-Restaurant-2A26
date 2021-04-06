@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include "gestionmenu.h"
+#include "gestioningredient.h"
 #include<QTimer>
 
 QT_BEGIN_NAMESPACE
@@ -27,10 +28,16 @@ private slots:
 
     void on_pushButton_historique_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
     gestionmenu menu;
-
+    gestioningredient ingredient;
 
 };
 #endif // MAINWINDOW_H

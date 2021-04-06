@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "gestionmenu.h"
+#include "gestioningredient.h"
 #include<QDateTime>
 #include<QTimer>
 #include<QTime>
@@ -10,7 +11,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    ui->setupUi(this); ui->tableView->setModel(menu.afficher()) ;
+    ui->setupUi(this);
+       ui->tableView->setModel(menu.afficher());
+       ui->tableView_2->setModel(ingredient.afficher());
+
 }
 
 MainWindow::~MainWindow()
@@ -107,3 +111,80 @@ void MainWindow::on_pushButton_historique_clicked()
 
     ui->tableView->setModel(menu.afficher());
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
+    int ID_INGREDIENT =ui->lineEdit_6->text().toInt();
+    QString NOM_PRODUIT =ui->lineEdit_7->text();
+    QString QUANTITE =ui->lineEdit_8->text();
+
+
+    gestioningredient ingredient (ID_INGREDIENT,NOM_PRODUIT,QUANTITE);
+    bool test = ingredient.ajouter();
+    if (test)
+    {   ui->tableView_2->setModel(ingredient.afficher()) ;
+        QMessageBox::information(nullptr,QObject::tr("ok"),
+                QObject::tr("ajout effectue\n"
+                            "Clich cancel to exit ."),QMessageBox::Cancel );
+    }
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Not ok "),
+                    QObject::tr("connection failed.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    {
+        int ID_INGREDIENT =ui->lineEdit_6->text().toInt();
+        QString NOM_PRODUIT=ui->lineEdit_7->text();
+        QString QUANTITE =ui->lineEdit_8->text();
+
+
+        gestioningredient ingredient (ID_INGREDIENT,NOM_PRODUIT,QUANTITE);
+        {
+        bool test=ingredient.modifier();
+         if (test)
+         {   ui->tableView_2->setModel(ingredient.afficher());
+             QMessageBox::information(nullptr,QObject::tr("ok"),
+                     QObject::tr("modification effectue\n"
+                                 "Click cancel to exit ."),QMessageBox::Cancel );
+         }
+         else
+             QMessageBox::critical(nullptr, QObject::tr("Not ok "),
+                         QObject::tr("connection failed.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+
+         ui->lineEdit_6->setText("");
+         ui->lineEdit_7->setText("");
+         ui->lineEdit_8->setText("");
+
+
+    }
+
+}}
+void MainWindow::on_pushButton_4_clicked()
+
+{
+    int ID=ui->lineEdit_6->text().toInt();
+
+
+    bool test=ingredient.supprimer(ID);
+    if (test)
+    {  ui->tableView_2->setModel(ingredient.afficher()) ;
+        QMessageBox::information(nullptr,QObject::tr("ok"),
+                QObject::tr("suppression effectue\n"
+                            "Clich cancel to exit ."),QMessageBox::Cancel );
+    }
+
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Not ok "),
+                    QObject::tr("suprfailed.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+
+

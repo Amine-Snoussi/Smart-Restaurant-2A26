@@ -25,12 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    gestioningredient.cpp \
     gestionmenu.cpp \
         main.cpp \
         mainwindow.cpp \
     connexion.cpp
 
 HEADERS += \
+    gestioningredient.h \
     gestionmenu.h \
         mainwindow.h \
     connexion.h
