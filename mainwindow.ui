@@ -14,23 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>761</width>
-      <height>491</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>651</width>
-      <height>431</height>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -95,7 +85,7 @@
        <rect>
         <x>340</x>
         <y>40</y>
-        <width>256</width>
+        <width>451</width>
         <height>192</height>
        </rect>
       </property>
@@ -178,19 +168,6 @@
        <string>Historique</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2_ajouter">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>330</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Ajouter</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_3_modifier">
       <property name="geometry">
        <rect>
@@ -241,6 +218,68 @@
       </property>
       <property name="text">
        <string>Classement</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Ajouter_Button">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>330</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche1">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>10</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_tri">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>0</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>230</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Stat</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat_3">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>230</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PDF</string>
       </property>
      </widget>
     </widget>
@@ -374,25 +413,50 @@
        <rect>
         <x>320</x>
         <y>40</y>
-        <width>256</width>
+        <width>461</width>
         <height>192</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche1_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>10</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_tri_2">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat_2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>240</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Stat</string>
       </property>
      </widget>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

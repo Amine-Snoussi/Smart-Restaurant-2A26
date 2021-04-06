@@ -74,6 +74,36 @@ bool gestioningredient::modifier()
         return query.exec();
 
 }
+QSqlQueryModel *gestioningredient::recherche(QString a)
+{
+    QSqlQueryModel * model = new QSqlQueryModel;
+
+
+    model->setQuery("select * from INGREDIENT WHERE NOM_PRODUIT LIKE '%"+a+"%'");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID_INGREDIENT"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("NOM_PRODUIT"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("QUANTITE"));
+
+    return model;
+
+
+}
+
+QSqlQueryModel *gestioningredient::tri()
+{
+    QSqlQueryModel * model = new QSqlQueryModel;
+
+
+    model->setQuery("select * from INGREDIENT ORDER BY QUANTITE"); //selection de la table à afficher
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID_INGREDIENT"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("NOM_PRODUIT"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("QUANTITE"));
+
+
+    return model;
+
+
+}
 
 
 

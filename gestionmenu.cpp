@@ -53,6 +53,25 @@ QSqlQueryModel *gestionmenu::afficher()
 
 }
 
+
+
+QSqlQueryModel *gestionmenu::recherche(QString a)
+{
+    QSqlQueryModel * model = new QSqlQueryModel;
+
+
+    model->setQuery("select * from MENU WHERE SPECIALITE LIKE '%"+a+"%'");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID_MENU"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("SPECIALITE"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("CATEGORIE"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("NOM_PLAT"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("PRIX"));
+
+    return model;
+
+
+}
+
 bool gestionmenu::supprimer(int id)
 {  //supprimer suvant l'id
     QSqlQuery query ;
@@ -77,5 +96,23 @@ bool gestionmenu::modifier()
         query.bindValue(":prix", res);
 
         return query.exec();
+
+}
+
+
+QSqlQueryModel *gestionmenu::tri()
+{
+    QSqlQueryModel * model = new QSqlQueryModel;
+
+
+    model->setQuery("select * from MENU ORDER BY PRIX"); //selection de la table à afficher
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID_MENU"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("SPECIALITE"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("CATEGORIE"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("NOM_PLAT"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("PRIX"));
+
+    return model;
+
 
 }

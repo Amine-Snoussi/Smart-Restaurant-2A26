@@ -22,6 +22,10 @@ public:
     QSqlQueryModel * afficher();
     bool supprimer(int ID_INGREDIENT) ;
     bool modifier();
+    QSqlQueryModel *recherche(QString a);
+    QSqlQueryModel *tri();
+
+
 
 private:
 int ID_INGREDIENT;
