@@ -24,6 +24,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->comboBox_3->setModel(co.afficheroncomboc());
     ui->comboBox_4->setModel(co.afficheroncomboc());
+    int ret=A.connect_arduino();
+             switch(ret){
+             case(0):qDebug()<< "arduino is availble and connected to :"<< A.getarduino_port_name();
+                 break;
+             case(1):qDebug()<< "arduino is availble but not connected to :"<< A.getarduino_port_name();
+                 break;
+             case(-1):qDebug()<< "arduino is not availble";
+             }
+             QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(alert()));
 }
 
 MainWindow::~MainWindow()
@@ -31,7 +40,28 @@ MainWindow::~MainWindow()
     delete ui;
 
 }
+void MainWindow::alert(){
 
+    data=A.read_from_arduino();
+    QString DataAsString = QString(data);
+    qDebug()<< data;
+    if (data=="1"){
+           A.write_to_arduino("1");
+    }
+    if (data=="0"){
+           A.write_to_arduino("0");
+    }
+    if(data=="1"){
+            check=!check;
+       }
+    if (data=="1"){
+        QMessageBox::critical(nullptr, QObject::tr("INVITE"),
+                    QObject::tr("THE GAZ IS DETECTED ! .\n"
+                                "Please check your GAZ ."), QMessageBox::Ok);
+
+    }
+
+}
 
 void MainWindow::on_Ajouter_clicked()
 {
@@ -245,3 +275,7 @@ void MainWindow::on_Pdf_conge_clicked()
 {
  co.genererPDF();
 }
+
+
+
+

@@ -71,7 +71,7 @@ QSqlQueryModel * cong ::afficheroncomboc()
  void  cong::genererPDF(){
  //QDateTime datecreation = date.currentDateTime();
                //QString afficheDC = "Date de Creation PDF : " + datecreation.toString() ;
-                      QPdfWriter pdf("C:\\Users\\21654\\Documents\\proj\\pdf.pdf");
+                      QPdfWriter pdf("C:\\Users\\21654\\Desktop\\proj\\pdf.pdf");
                       QPainter painter(&pdf);
                      int i = 4000;
                           painter.setPen(Qt::red);

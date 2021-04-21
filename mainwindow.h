@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "employe.h"
 #include "cong.h"
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,6 +18,7 @@ public:
     ~MainWindow();
 
 private slots:
+     void alert();
     void on_Ajouter_clicked();
 
     void on_comboBox_currentIndexChanged(int index);
@@ -47,9 +49,18 @@ private slots:
 
     void on_Pdf_conge_clicked();
 
+    void on_pushButton_6_clicked();
+
+    void on_supprimer_clicked();
+
+    void on_Supprimer_conge_2_clicked();
+
 private:
     Ui::MainWindow *ui;
      EMPLOYE emp;
      cong co;
+      arduino A;
+      QByteArray data;
+      bool check;
 };
 #endif // MAINWINDOW_H

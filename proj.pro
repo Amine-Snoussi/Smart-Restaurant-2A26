@@ -1,7 +1,7 @@
-QT       += core gui
+QT       += core gui charts
 QT += sql
-
-
+QT       += serialport
+QT       += core gui printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -11,6 +11,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     cong.cpp \
     connexion.cpp \
     employe.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    arduino.h \
     cong.h \
     connexion.h \
     employe.h \

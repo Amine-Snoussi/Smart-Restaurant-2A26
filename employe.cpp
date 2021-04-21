@@ -4,7 +4,7 @@
 #include<QPdfWriter>
 #include <QFileDialog>
 #include <QFile>
-EMPLOYE::  EMPLOYE(int id,QString nom,QString pren,int tel,QString datee,int salaire)
+EMPLOYE::  EMPLOYE(int id,QString nom,QString pren,int tel,QString datee,int salaire) // constructeur
 {
 this->id=id;
     this->nom=nom;
