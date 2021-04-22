@@ -21,4 +21,5 @@ public:
       QSqlQueryModel* tri(QString,QString);
 };
 
+
 #endif // FOURN_H
