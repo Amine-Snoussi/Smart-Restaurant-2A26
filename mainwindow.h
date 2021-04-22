@@ -45,6 +45,12 @@ private slots:
 
     void on_le_recherche_2_textChanged(const QString &arg1);
 
+    void on_tri_fournisseur_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     fourn FO;

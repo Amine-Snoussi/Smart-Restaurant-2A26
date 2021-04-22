@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -354,56 +354,56 @@ transition: all 0.4s ease 0s;
          </rect>
         </property>
        </widget>
-       <widget class="QComboBox" name="colone_tri_1">
+       <widget class="QComboBox" name="colone_tri">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>450</y>
+          <x>30</x>
+          <y>360</y>
           <width>101</width>
           <height>22</height>
          </rect>
         </property>
         <item>
          <property name="text">
-          <string>MATRICULE</string>
+          <string>mat</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>ADRESSE</string>
+          <string>adr</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>NUMERO</string>
+          <string>num</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>RIB</string>
+          <string>rib</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>NOM</string>
+          <string>nom</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>PRODUIT</string>
+          <string>prod</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>DATE_AJOUT</string>
+          <string>dat</string>
          </property>
         </item>
        </widget>
-       <widget class="QComboBox" name="ordre_tri_2">
+       <widget class="QComboBox" name="ordre_tri">
         <property name="geometry">
          <rect>
-          <x>210</x>
-          <y>450</y>
+          <x>180</x>
+          <y>360</y>
           <width>73</width>
           <height>22</height>
          </rect>
@@ -422,8 +422,8 @@ transition: all 0.4s ease 0s;
        <widget class="QPushButton" name="tri_fournisseur">
         <property name="geometry">
          <rect>
-          <x>490</x>
-          <y>430</y>
+          <x>300</x>
+          <y>360</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -466,80 +466,6 @@ transition: all 0.4s ease 0s;
          <string>tri</string>
         </property>
        </widget>
-       <widget class="QGroupBox" name="groupBox_6">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>340</y>
-          <width>351</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 198, 199);</string>
-        </property>
-        <property name="title">
-         <string>rechercher</string>
-        </property>
-        <widget class="QComboBox" name="cb_recherche">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>161</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>MATRICULE</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>ADRESSE</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>NUMERO</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>RIB</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>NOM</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>PRODUIT</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>DATE_AJOUT</string>
-          </property>
-         </item>
-        </widget>
-        <widget class="QLineEdit" name="le_recherche">
-         <property name="geometry">
-          <rect>
-           <x>200</x>
-           <y>30</y>
-           <width>141</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="placeholderText">
-          <string>Rechercher</string>
-         </property>
-        </widget>
-       </widget>
        <widget class="QGroupBox" name="groupBox_7">
         <property name="geometry">
          <rect>
@@ -579,6 +505,19 @@ background-color: rgb(255, 198, 199);</string>
           </rect>
          </property>
         </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>810</x>
+          <y>380</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>excel</string>
+        </property>
        </widget>
       </widget>
      </widget>
@@ -1448,123 +1387,11 @@ transition: all 0.4s ease 0s;
          </property>
         </widget>
        </widget>
-       <widget class="QComboBox" name="colone_tri">
-        <property name="geometry">
-         <rect>
-          <x>12</x>
-          <y>440</y>
-          <width>131</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>NUM_COMMANDE</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>QUANTITE</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>PRIX</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>DESCRIPTION</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>FOURNISSEUR</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>DATE_ACHAT</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>PRODUIT</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QComboBox" name="ordre_tri">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>440</y>
-          <width>73</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>ASC</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>DESC</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QPushButton" name="tri">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>440</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
-QPushButton {
-	
-padding: 1px;
-border-style: solid;
-border: 2px solid gray;
-border-radius: 8px;
-background-color: rgb(180, 216, 131);
-border:2px solid #000;
-}
-QPushButton {
-
-     color: #fff !important;
-text-transform: uppercase;
-text-decoration: none;
-background: #ff0206;
-padding: 20px;
-border-radius: 5px;
-display: inline-block;
-border: none;
-transition: all 0.4s ease 0s;
- }
- QPushButton:hover {
-background-image: url(:/image/Nouveau dossier/check-mark.png);
-     background: #ff5e61;
-letter-spacing: 1px;
--webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
--moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
-box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
-transition: all 0.4s ease 0s;
- }
-</string>
-        </property>
-        <property name="text">
-         <string>tri</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="PDF">
         <property name="geometry">
          <rect>
-          <x>650</x>
-          <y>480</y>
+          <x>590</x>
+          <y>470</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1721,7 +1548,7 @@ transition: all 0.4s ease 0s;
        <widget class="QGroupBox" name="groupBox_11">
         <property name="geometry">
          <rect>
-          <x>570</x>
+          <x>470</x>
           <y>410</y>
           <width>120</width>
           <height>61</height>
@@ -1781,6 +1608,53 @@ transition: all 0.4s ease 0s;
           <string>PDF</string>
          </property>
         </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>430</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+        </property>
+        <property name="text">
+         <string>imprimer facture</string>
+        </property>
        </widget>
       </widget>
      </widget>

@@ -18,6 +18,7 @@ public:
     bool modifier(int id,int rib, int num);
     bool supprimer(int);
      QSqlQueryModel * afficheroncombo();
+      QSqlQueryModel* tri(QString,QString);
 };
 
 #endif // FOURN_H

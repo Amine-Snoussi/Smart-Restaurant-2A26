@@ -86,3 +86,9 @@ bool fourn :: supprimer(int idd)
     return    query.exec();
 
 }
+QSqlQueryModel*  fourn::tri(QString colone, QString ordre)
+{
+QSqlQueryModel* model=new QSqlQueryModel();
+model->setQuery("select * from FOUR order by "+colone+" "+ordre+"");
+return model;
+}

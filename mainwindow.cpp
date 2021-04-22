@@ -2,7 +2,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "comd.h"
-
+#include<QPrinter>
+#include<QPrintDialog>
+#include<QTableView>
+#include <QFileDialog>
+#include <QFile>
+#include <QtDebug>
 #include <QApplication>
 #include <QMessageBox>
 #include "fourn.h"
@@ -208,4 +213,58 @@ ui->tabachat->setModel(model);
             }
 
         }
+}
+
+void MainWindow::on_tri_fournisseur_clicked()
+{
+    QString colone=ui->colone_tri->currentText();
+        QString ordre=ui->ordre_tri->currentText();
+        fourn F;
+        ui->tabfournisseur->setModel(F.tri(colone,ordre));
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    QPrinter  printer;
+        printer.setPrinterName("test");
+        QPrintDialog dialog(&printer,this);
+        if (dialog.exec()==QDialog::Rejected) return;
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QTableView *table;
+               table = ui->tabfournisseur;
+
+               QString filters("CSV files (.csv);;All files (.*)");
+               QString defaultFilter("CSV files (*.csv)");
+               QString fileName = QFileDialog::getSaveFileName(0, "Save file", QCoreApplication::applicationDirPath(),
+                                  filters, &defaultFilter);
+               QFile file(fileName);
+
+               QAbstractItemModel *model =  table->model();
+               if (file.open(QFile::WriteOnly | QFile::Truncate)) {
+                   QTextStream data(&file);
+                   QStringList strList;
+                   for (int i = 0; i < model->columnCount(); i++) {
+                       if (model->headerData(i+3, Qt::Horizontal, Qt::DisplayRole).toString().length() > 0)
+                           strList.append("\"" + model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString() + "\"");
+                       else
+                           strList.append("");
+                   }
+                   data << strList.join(";") << "\n";
+                   for (int i = 0; i < model->rowCount(); i++) {
+                       strList.clear();
+                       for (int j = 0; j < model->columnCount(); j++) {
+
+                           if (model->data(model->index(i, j)).toString().length() > 0)
+                               strList.append("\"" + model->data(model->index(i, j)).toString() + "\"");
+                           else
+                               strList.append("");
+                       }
+                       data << strList.join(";") + "\n";
+                   }
+                   file.close();
+                   QMessageBox::information(this,"Exporter To Excel","Exporter En Excel Avec Succées ");
+               }
 }
