@@ -1,7 +1,9 @@
-QT       += core gui charts
+QT       += core gui
 QT += sql
+QT       += core gui charts
 QT       += serialport
-QT       += core gui printsupport
+
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -16,17 +18,20 @@ SOURCES += \
     connexion.cpp \
     employe.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    statelivrec.cpp
 
 HEADERS += \
     arduino.h \
     cong.h \
     connexion.h \
     employe.h \
-    mainwindow.h
+    mainwindow.h \
+    statelivrec.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    statelivrec.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

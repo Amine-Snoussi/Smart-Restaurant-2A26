@@ -23,6 +23,7 @@ public:
     bool modifierc(int id,QString datedeb, QString datefin);
     bool supprimerc(int);
      void genererPDF();
+      QSqlQueryModel* tri(QString,QString);
 
 };
 

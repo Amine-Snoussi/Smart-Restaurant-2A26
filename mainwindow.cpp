@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QtDebug>
+#include "statelivrec.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -279,3 +280,17 @@ void MainWindow::on_Pdf_conge_clicked()
 
 
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    stat_liv=new statelivrec(this);
+    stat_liv->show();
+}
+
+void MainWindow::on_button_tri_clicked()
+{
+    QString colone=ui->colone_tri->currentText();
+        QString ordre=ui->ordre_tri->currentText();
+        cong c;
+        ui->tableView_2->setModel(c.tri(colone,ordre));
+}

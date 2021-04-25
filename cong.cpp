@@ -101,3 +101,9 @@ QSqlQueryModel * cong ::afficheroncomboc()
 
                              i = i + 500;
                           }}
+ QSqlQueryModel*  cong::tri(QString colone, QString ordre)
+ {
+ QSqlQueryModel* model=new QSqlQueryModel();
+ model->setQuery("select * from CONGE order by "+colone+" "+ordre+"");
+ return model;
+ }

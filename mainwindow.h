@@ -5,6 +5,8 @@
 #include "employe.h"
 #include "cong.h"
 #include "arduino.h"
+#include "dialogstatemp.h"
+#include "statelivrec.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -55,10 +57,15 @@ private slots:
 
     void on_Supprimer_conge_2_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_button_tri_clicked();
+
 private:
     Ui::MainWindow *ui;
      EMPLOYE emp;
      cong co;
+       statelivrec *stat_liv;
       arduino A;
       QByteArray data;
       bool check;
