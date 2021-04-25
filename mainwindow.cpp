@@ -10,6 +10,8 @@
 #include <QFile>
 #include <QtDebug>
 #include "statelivrec.h"
+#include<QPrinter>
+#include<QPrintDialog>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -293,4 +295,13 @@ void MainWindow::on_button_tri_clicked()
         QString ordre=ui->ordre_tri->currentText();
         cong c;
         ui->tableView_2->setModel(c.tri(colone,ordre));
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QPrinter  printer;
+            printer.setPrinterName("test");
+            QPrintDialog dialog(&printer,this);
+            if (dialog.exec()==QDialog::Rejected) return;
+            //ui->textEdit->print(&printer);
 }
