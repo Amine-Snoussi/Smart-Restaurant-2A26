@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Menu_ingredient</class>
+ <widget class="QMainWindow" name="Menu_ingredient">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1054</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu Ingredient</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1061</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/background.jpg);</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Menu">
+     <attribute name="title">
+      <string>Menu</string>
+     </attribute>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>170</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>230</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>70</y>
+        <width>621</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/yellow.png);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>ID MENU</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>SPECIALITE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>CATEGORIE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>NOM PLAT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>276</y>
+        <width>55</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>PRIX</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_historique">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>270</y>
+        <width>241</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Historique</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3_modifier">
+      <property name="geometry">
+       <rect>
+        <x>162</x>
+        <y>330</y>
+        <width>121</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4_supp">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>330</y>
+        <width>141</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5_video">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>330</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Video</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6_class">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>370</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Classement</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Ajouter_Button">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>330</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche1">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>40</y>
+        <width>261</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_tri">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>40</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>270</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Stat</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat_3">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>270</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>PDF</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Ingredient</string>
+     </attribute>
+     <widget class="QLineEdit" name="lineEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>80</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_7">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>140</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_8">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>360</y>
+        <width>251</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>HISTORIQUE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>270</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>AJOUTER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>52</x>
+        <y>340</y>
+        <width>111</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>MODIFIER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>340</y>
+        <width>121</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>SUPPRIMER</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>34</x>
+        <y>80</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>ID INGREDIENT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>140</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>NOM PRODUIT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>44</x>
+        <y>220</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/images/Empty.png);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>QUANTITE</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>160</y>
+        <width>621</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/yellow.png);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche1_2">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>130</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/Empty.png);
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_tri_2">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>130</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stat_2">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>360</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+background-color: rgb(180, 216, 131);
+border:2px solid #000;
+}
+QPushButton {
+
+     color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ff0206;
+padding: 20px;
+border-radius: 5px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+ }
+ QPushButton:hover {
+background-image: url(:/image/Nouveau dossier/check-mark.png);
+     background: #ff5e61;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.55);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.55);
+transition: all 0.4s ease 0s;
+ }
+</string>
+      </property>
+      <property name="text">
+       <string>Stat</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
