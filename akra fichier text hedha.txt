@@ -1,0 +1,14 @@
+Behy , taamel mzeya chouf chaandi machekel
+Crud Client makhdoum l code
+affichage mainwindow kaeed yji l kdim l aamlou 
+Crud Reservation mezelt makhdemthouch ken tnajem ekhdem enty 
+les métiers aandi , recherche fel clients w réservations
+confirmation mail
+statistique 
+(w fama haja l profa katli ken najem nzidha ena katli khatr
+bonus leya ena 
+elli heya espace authentification w 
+login w logout lel admin w baeed yodhohrou
+les cruds mteii w khw )
+tnajem mataamalhech w tsalahli ken f les cruds mteii 
+et merci en avance 
